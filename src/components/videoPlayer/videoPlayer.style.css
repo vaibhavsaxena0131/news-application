@@ -1,0 +1,108 @@
+.custom-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  background-color: #ff7802 !important; /* Customize the color */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.custom-thumb::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  background-color: #fb7805 !important; /* Customize the color */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-container .slider {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--val) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 1.5em + var(--ratio) * (100% - 1.5em));
+  margin: 0.3em 0em 0em 0em;
+  padding: 0;
+  width: 100%;
+  height: 1.5em;
+  background: transparent;
+  font:
+    1em/1 arial,
+    sans-serif;
+}
+
+.slider-container .slider,
+.slider-container .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.slider-container .slider::-webkit-slider-runnable-track {
+  box-sizing: border-box;
+  border: none;
+  width: 12.5em;
+  height: 0.25em;
+  background: #ccc;
+}
+
+.slider-container .slider::-webkit-slider-runnable-track {
+  background: linear-gradient(#c19064, #c19064) 0 / var(--sx) 100% no-repeat
+    #ccc;
+}
+
+.slider-container .slider::-moz-range-track {
+  box-sizing: border-box;
+  border: none;
+  width: 12.5em;
+  height: 0.25em;
+  background: #ccc;
+}
+
+.slider-container .slider::-ms-track {
+  box-sizing: border-box;
+  border: none;
+  width: 12.5em;
+  height: 0.25em;
+  background: #ccc;
+}
+
+.slider-container .slider::-moz-range-progress {
+  height: 0.25em;
+  background: #c19064;
+}
+
+.slider-container .slider::-ms-fill-lower {
+  height: 0.25em;
+  background: #c19064;
+}
+
+.slider-container .slider::-webkit-slider-thumb {
+  margin-top: -0.625em;
+  box-sizing: border-box;
+  border: none;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.slider-container .slider::-moz-range-thumb {
+  box-sizing: border-box;
+  border: none;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: #f90;
+}
+
+.slider-container .slider::-ms-thumb {
+  margin-top: 0;
+  box-sizing: border-box;
+  border: none;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: #f90;
+}
+
+.slider-container .slider::-ms-tooltip {
+  display: none;
+}
